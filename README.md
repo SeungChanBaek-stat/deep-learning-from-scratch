@@ -13,10 +13,14 @@ https://github.com/WegraLee/deep-learning-from-scratch
 http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198
     
 ![title](http://www.hanbit.co.kr/data/books/B8475831198_l.jpg)
+
+chapter-1/chapter-1-Hello-Python.ipynb
     
-- 1장 : http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/밑바닥부터 시작하는 딥러닝1/밑시딥1 - 1장/밑시딥1 - 1장 헬로 파이썬.ipynb
-- 2장 : http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/밑바닥부터 시작하는 딥러닝1/밑시딥1 - 2장/밑시딥1 - 2장 퍼셉트론.ipynb
-- 3장 : http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/밑바닥부터 시작하는 딥러닝1/밑시딥1 - 3장/밑시딥1 - 3장 신경망.ipynb
+- 1장 : http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-1/chapter-1-Hello-Python.ipynb
+- 2장 : http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-2/chapter-2-Perceptron.ipynb
+- 3장 : http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-3/chapter-3-NeuralNet.ipynb
+- 4장 : http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-4/chapter-4-LearningNeuralNet.ipynb
+
 
 # 밑바닥부터 시작하는 딥러닝2 (진행예정)
 # 밑바닥부터 시작하는 딥러닝3 (진행예정)
