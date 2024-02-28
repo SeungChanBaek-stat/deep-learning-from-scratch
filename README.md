@@ -19,7 +19,7 @@ chapter-1/chapter-1-Hello-Python.ipynb
 - 1장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-1/chapter-1-Hello-Python.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/e8992befb76d572a430efaf5d64f25c5)
 - 2장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-2/chapter-2-Perceptron.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/b1bb6652b754c7f6d067006522261503)
 - 3장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-3/chapter-3-NeuralNet.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/f00258cf96554a7bb2c6cba32ed69781)
-- 4장 : http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-4/chapter-4-LearningNeuralNet.ipynb
+- 4장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-4/chapter-4-LearningNeuralNet.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/8ee1224ae45a42e3c5793a03793d17c2)
 
 
 # 밑바닥부터 시작하는 딥러닝2 (진행예정)
