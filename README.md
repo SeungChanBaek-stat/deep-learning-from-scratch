@@ -13,8 +13,6 @@ https://github.com/WegraLee/deep-learning-from-scratch
 http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198
     
 ![title](http://www.hanbit.co.kr/data/books/B8475831198_l.jpg)
-
-chapter-1/chapter-1-Hello-Python.ipynb
     
 - 1장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-1/chapter-1-Hello-Python.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/e8992befb76d572a430efaf5d64f25c5)
 - 2장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-2/chapter-2-Perceptron.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/b1bb6652b754c7f6d067006522261503)
