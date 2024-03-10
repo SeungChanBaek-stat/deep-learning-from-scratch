@@ -6,7 +6,7 @@
     
 ## Github
     
-https://github.com/WegraLee/deep-learning-from-scratch
+[https://github.com/SeungChanBaek-stat/deep-learning-from-scratch](https://github.com/SeungChanBaek-stat/deep-learning-from-scratch)
     
 ## 책주소
 
