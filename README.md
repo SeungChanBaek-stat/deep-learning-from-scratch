@@ -1,6 +1,4 @@
-# 밑바닥부터 시작하는 딥러닝 정리
-    
-# 밑바닥부터 시작하는 딥러닝1 (진행중)
+# 밑바닥부터 시작하는 딥러닝1 정리(진행중)
     
 '밑바닥부터 시작하는 딥러닝' 내용을 jupyter notebook으로 정리하는 중입니다.
     
@@ -20,7 +18,3 @@ http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198
 - 4장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-4/chapter-4-LearningNeuralNet.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/8ee1224ae45a42e3c5793a03793d17c2)
 - 5장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-5/chapter-5-Backpropagation.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/a74c7ccedacbd55ab02d1300e0fd889d)
 - 6장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter_6/chapter-6-LearningAlgorithms.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/648dd768c7481247cd88950061658e00)
-
-# 밑바닥부터 시작하는 딥러닝2 (진행예정)
-# 밑바닥부터 시작하는 딥러닝3 (진행예정)
-# 밑바닥부터 시작하는 딥러닝4 (진행예정)
