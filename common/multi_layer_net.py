@@ -22,12 +22,13 @@ class MultiLayerNet:
     weight_decay_lambda : 가중치 감소(L2 법칙)의 세기
     """
     def __init__(self, input_size, hidden_size_list, output_size,
-                 activation='relu', weight_init_std='relu', weight_decay_lambda=0):
+                 activation='relu', weight_init_std='relu', weight_decay_lambda=0, penalization='L2'):
         self.input_size = input_size
         self.output_size = output_size
         self.hidden_size_list = hidden_size_list
         self.hidden_layer_num = len(hidden_size_list)
         self.weight_decay_lambda = weight_decay_lambda
+        self.penalization = penalization
         self.params = {}
 
         # 가중치 초기화
@@ -85,11 +86,16 @@ class MultiLayerNet:
         손실 함수의 값
         """
         y = self.predict(x)
-
-        weight_decay = 0
-        for idx in range(1, self.hidden_layer_num + 2):
-            W = self.params['W' + str(idx)]
-            weight_decay += 0.5 * self.weight_decay_lambda * np.sum(W ** 2)
+        if self.penalization == 'L2':      
+            weight_decay = 0
+            for idx in range(1, self.hidden_layer_num + 2):
+                W = self.params['W' + str(idx)]
+                weight_decay += 0.5 * self.weight_decay_lambda * np.sum(W ** 2)
+        elif self.penalization == 'L1':
+            weight_decay = 0
+            for idx in range(1, self.hidden_layer_num + 2):
+                W = self.params['W' + str(idx)]
+                weight_decay += self.weight_decay_lambda * np.sum(np.abs(W))
 
         return self.last_layer.forward(y, t) + weight_decay
 
@@ -152,8 +158,13 @@ class MultiLayerNet:
 
         # 결과 저장
         grads = {}
-        for idx in range(1, self.hidden_layer_num+2):
-            grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * self.layers['Affine' + str(idx)].W
-            grads['b' + str(idx)] = self.layers['Affine' + str(idx)].db
+        if self.penalization == 'L2':
+            for idx in range(1, self.hidden_layer_num+2):
+                grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * self.layers['Affine' + str(idx)].W
+                grads['b' + str(idx)] = self.layers['Affine' + str(idx)].db
+        elif self.penalization == 'L1':
+            for idx in range(1, self.hidden_layer_num+2):
+                grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * np.sign(self.layers['Affine' + str(idx)].W)
+                grads['b' + str(idx)] = self.layers['Affine' + str(idx)].db
 
         return grads

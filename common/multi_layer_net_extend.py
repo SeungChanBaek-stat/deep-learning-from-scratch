@@ -26,13 +26,15 @@ class MultiLayerNetExtend:
     """
     def __init__(self, input_size, hidden_size_list, output_size,
                  activation='relu', weight_init_std='relu', weight_decay_lambda=0, 
-                 use_dropout = False, dropout_ration = 0.5, use_batchnorm=False):
+                 penalization='L2', use_dropout = False, dropout_ration = 0.5,
+                 use_batchnorm=False):
         self.input_size = input_size
         self.output_size = output_size
         self.hidden_size_list = hidden_size_list
         self.hidden_layer_num = len(hidden_size_list)
         self.use_dropout = use_dropout
         self.weight_decay_lambda = weight_decay_lambda
+        self.penalization = penalization
         self.use_batchnorm = use_batchnorm
         self.params = {}
 
@@ -97,11 +99,17 @@ class MultiLayerNetExtend:
         t : 정답 레이블 
         """
         y = self.predict(x, train_flg)
-
-        weight_decay = 0
-        for idx in range(1, self.hidden_layer_num + 2):
-            W = self.params['W' + str(idx)]
-            weight_decay += 0.5 * self.weight_decay_lambda * np.sum(W**2)
+        
+        if self.penalization == 'L2':
+            weight_decay = 0
+            for idx in range(1, self.hidden_layer_num + 2):
+                W = self.params['W' + str(idx)]
+                weight_decay += 0.5 * self.weight_decay_lambda * np.sum(W**2)
+        elif self.penalization == 'L1':
+            weight_decay = 0
+            for idx in range(1, self.hidden_layer_num + 2):
+                W = self.params['W' + str(idx)]
+                weight_decay += self.weight_decay_lambda * np.sum(np.abs(W))
 
         return self.last_layer.forward(y, t) + weight_decay
 
@@ -155,12 +163,21 @@ class MultiLayerNetExtend:
 
         # 결과 저장
         grads = {}
-        for idx in range(1, self.hidden_layer_num+2):
-            grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * self.params['W' + str(idx)]
-            grads['b' + str(idx)] = self.layers['Affine' + str(idx)].db
+        if self.penalization == 'L2':
+            for idx in range(1, self.hidden_layer_num+2):
+                grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * self.params['W' + str(idx)]
+                grads['b' + str(idx)] = self.layers['Affine' + str(idx)].db
 
-            if self.use_batchnorm and idx != self.hidden_layer_num+1:
-                grads['gamma' + str(idx)] = self.layers['BatchNorm' + str(idx)].dgamma
-                grads['beta' + str(idx)] = self.layers['BatchNorm' + str(idx)].dbeta
+                if self.use_batchnorm and idx != self.hidden_layer_num+1:
+                    grads['gamma' + str(idx)] = self.layers['BatchNorm' + str(idx)].dgamma
+                    grads['beta' + str(idx)] = self.layers['BatchNorm' + str(idx)].dbeta
+        elif self.penalization == 'L1':
+            for idx in range(1, self.hidden_layer_num+2):
+                grads['W' + str(idx)] = self.layers['Affine' + str(idx)].dW + self.weight_decay_lambda * np.sign(self.params['W' + str(idx)])
+                grads['b' + str(idx)] = self.layers['Affine' + str(idx)].db
+
+                if self.use_batchnorm and idx != self.hidden_layer_num+1:
+                    grads['gamma' + str(idx)] = self.layers['BatchNorm' + str(idx)].dgamma
+                    grads['beta' + str(idx)] = self.layers['BatchNorm' + str(idx)].dbeta
 
         return grads

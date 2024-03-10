@@ -2,14 +2,14 @@
 import sys, os
 sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
 import numpy as np
-from common.optimizer import *
+from common.optim import *
 
 class Trainer:
     """신경망 훈련을 대신 해주는 클래스
     """
     def __init__(self, network, x_train, t_train, x_test, t_test,
                  epochs=20, mini_batch_size=100,
-                 optimizer='SGD', optimizer_param={'lr':0.01}, 
+                 optimizer='SGD', optimizer_param={'learning_rate':0.01}, 
                  evaluate_sample_num_per_epoch=None, verbose=True):
         self.network = network
         self.verbose = verbose
@@ -23,7 +23,10 @@ class Trainer:
 
         # optimzer
         optimizer_class_dict = {'sgd':SGD, 'momentum':Momentum, 'nesterov':Nesterov,
-                                'adagrad':AdaGrad, 'rmsprpo':RMSprop, 'adam':Adam}
+                                'adagrad':AdaGrad, 'rmsprop':RMSprop, 'adam':Adam}
+        
+        # optimizer_class_dict = {'sgd':SGD, 'momentum':Momentum,
+        #                         'adagrad':AdaGrad, 'rmsprpo':RMSprop, 'adam':Adam}
         self.optimizer = optimizer_class_dict[optimizer.lower()](**optimizer_param)
         
         self.train_size = x_train.shape[0]
