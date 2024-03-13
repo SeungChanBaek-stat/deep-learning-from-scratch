@@ -18,3 +18,4 @@ http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198
 - 4장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-4/chapter-4-LearningNeuralNet.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/8ee1224ae45a42e3c5793a03793d17c2)
 - 5장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-5/chapter-5-Backpropagation.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/a74c7ccedacbd55ab02d1300e0fd889d)
 - 6장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter_6/chapter-6-LearningAlgorithms.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/648dd768c7481247cd88950061658e00)
+- 7장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter_7/chapter-7-CNN.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/c9092c7b7f62854b82689f21a124df05)
