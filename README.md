@@ -1,6 +1,6 @@
 # 밑바닥부터 시작하는 딥러닝1 정리(진행중)
     
-'밑바닥부터 시작하는 딥러닝' 내용을 jupyter notebook으로 정리하는 중입니다.
+'밑바닥부터 시작하는 딥러닝' 내용의 jupyter notebook 정리본입니다. 1장부터 8장까지 모두 수록되어 있습니다.(8장 5절의 딥러닝의 미래는 제외하였습니다.)
     
 ## Github
     
@@ -19,3 +19,4 @@ http://www.hanbit.co.kr/store/books/look.php?p_code=B8475831198
 - 5장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter-5/chapter-5-Backpropagation.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/a74c7ccedacbd55ab02d1300e0fd889d)
 - 6장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter_6/chapter-6-LearningAlgorithms.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/648dd768c7481247cd88950061658e00)
 - 7장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter_7/chapter-7-CNN.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/c9092c7b7f62854b82689f21a124df05)
+- 8장 : [http://nbviewer.jupyter.org/github/SeungChanBaek-stat/deep-learning-from-scratch/chapter_8/chapter-8-DeepLearning.ipynb](https://nbviewer.org/gist/SeungChanBaek-stat/96931f4b801997009e961b1729e284cd)
